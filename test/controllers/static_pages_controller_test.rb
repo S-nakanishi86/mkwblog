@@ -3,7 +3,7 @@ require 'test_helper'
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 
   def setup
-    @base_title = "MKW BLOG"
+    @base_title = "MKW 最遅攻略サイト"
   end
 
   test "should get root" do

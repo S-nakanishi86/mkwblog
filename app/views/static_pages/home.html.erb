@@ -1,7 +1,77 @@
 <!-- :titleラベルのついたyieldメソッドに、Home文字列をprovideメソッドの効果で代入 -->
-<h1>Sample App</h1>
-<p>
-  This is the home page for the
-  <a href="https://railstutorial.jp/">Ruby on Rails Tutorial</a>
-  sample application.
-</p>
+<%# provide(:title, "Home") %>
+  <div class="row">
+    <div id="main" class="col-md-9">
+      <div class="main-header">
+        <div class="column1">
+          <div class="content-ex">
+            <i class="fas fa-feather-alt"></i> このサイトは……
+          </div>
+          <p>10年以上前に発売されたゲーム『マリオカートWii』の攻略を今更やっているサイトです。アイテムの基礎知識や対人戦向けのVSテクニックなど、対人戦レート9000を安定して取れるレベルを目標にした攻略情報をまとめていきます。</p>
+        </div>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#"><i class="fas fa-bomb fa-lg"></i> アイテム攻略</a></li>
+          <li><a href="#"><i class="fas fa-motorcycle fa-lg"></i> コース攻略</a></li>
+          <li><a href="#"><i class="fas fa-bolt fa-lg"></i> VS攻略</a></li>
+        </ul>
+      </div>
+      <div class="pickup">
+        <div id="new-entry">
+          <i class="fas fa-wifi fa-lg"></i> 新着記事
+        </div>
+      </div>
+      <div class="pickup-box clearfix">
+        <div class="post-box">
+          <div class="post-thumbnail">
+            必見！アイテム仕様一覧
+          </div>
+        </div>
+        <div class="post-box">
+          <div class="post-thumbnail">
+            必読！VSの掟
+          </div>
+        </div>
+        <div class="post-box">
+
+        </div>
+        <div class="post-box">
+
+        </div>
+      </div>
+    </div>
+    <aside id="sub" class="col-md-3">
+      <div class="sub-header">
+        <i class="far fa-hand-point-right fa-lg"></i> おすすめ記事
+      </div>
+      <div class="sub-menu">
+        アイテム基礎知識
+      </div>
+      <div class="member">
+        制作担当
+      </div>
+      <div class="member-name">
+        <%= image_tag("magired.jpg", alt: "まじれっど", width: "120") %>
+        <br>
+        まじれっど
+        <p>質問等は <i class="far fa-hand-point-down fa-lg"></i> のtwitterへ</p>
+        <p>お願いします ^^</p>
+      </div>
+      <div class="member">
+        攻略協力
+      </div>
+      <div class="member-name">
+        <%= image_tag("Deco.jpg", alt: "デコ", width: "120") %>
+        <br>
+        Deco
+        <a href="https://twitter.com/Deco_bee">
+          <i class="fab fa-youtube fa-lg faa-pulse animated-hover"></i>
+        </a>
+        <a href="https://www.youtube.com/user/Deco1008">
+          <i class="fab fa-twitter fa-lg faa-wrench animated-hover"></i>
+        </a>
+        <p>経歴：マリオカートWii 10年</p>
+      </div>
+    </aside>
+  </div>
