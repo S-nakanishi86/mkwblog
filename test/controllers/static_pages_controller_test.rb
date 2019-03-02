@@ -6,13 +6,13 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     @base_title = "MKW 最遅攻略サイト"
   end
 
-  test "should get root" do
-    get root_url
-    assert_response :success
-  end
+#  test "should get root" do
+#    get root_url
+#    assert_response :success
+#  end
 
-  test "should get home" do
-    get static_pages_home_url
+  test "should get mkw" do
+    get static_pages_mkw_url
     assert_response :success
     # 特定のHTMLタグが存在するかのテスト
     assert_select "title", "#{@base_title}"

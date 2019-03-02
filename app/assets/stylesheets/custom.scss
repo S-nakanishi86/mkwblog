@@ -1,0 +1,392 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/* 全てのページに適用 */
+
+body {
+  padding-top: 70px;
+  background: #e9dfe5;
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding-top: 140px;
+  }
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* 洗練されたタイポグラフィー */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.5em;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  /* font-weight: bold; */
+  font-family: 'klee', 'Hannotate SC', 'Yu Gothic UI', sans-serif;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu {
+  font-size: 1.2em;
+  font-family: 'klee', 'Hannotate SC', 'Yu Gothic UI', sans-serif;
+}
+
+/* メインコンテンツ */
+
+.main-header {
+  background: white;
+  color: black;
+  width: 100%;
+  padding: 50px 70px;
+}
+
+.column1 {
+  color: #777;
+  position: relative;
+  background: #e7e7eb;
+  box-shadow: 0 0 0 5px #e7e7eb;
+  border: dashed 2px white;
+  padding: 25px 25px 20px;
+}
+
+.column1:after {
+  position: absolute;
+  content: '';
+  left: -7px;
+  top: -7px;
+  border-width: 0 0 30px 30px;
+  border-style: solid;
+  border-color: #fff #fff #a6a5c4;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+.content-ex {
+  font-size: 1.5em;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #777;
+}
+
+.menu {
+  width: 100%;
+  background: white;
+}
+
+.menu ul {
+  list-style-type: none;
+  text-align: center; /* 左右中央寄せは親要素に対して指定 */
+  padding: 0 50px 0 40px;
+  margin-bottom: 0;
+}
+
+.menu ul li {
+  display: inline-block;
+  width: 30%;
+  height: 50px;
+  margin-left: 1.5%;
+  vertical-align: middle;
+  line-height: 50px;
+  background: #bbc8e6;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #7b7c7d;
+  border-radius: 3px;
+  border-bottom: solid 4px #8491c3;
+}
+
+.menu ul li:hover {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  border-bottom: none;/*線を消す*/
+}
+
+.menu ul li a:visited {
+  color: #7b7c7d;
+}
+
+.pickup {
+  width: 100%;
+  background: white;
+  padding: 40px 50px 10px 50px;
+}
+
+#new-entry {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #474a4d;
+  position: relative;
+  padding-left: 30px;
+  width: 40%;
+}
+
+#new-entry:before {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #ffc68e;
+}
+
+#new-entry:after {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #ffc68e;
+}
+
+.pickup-box {
+  width: 100%;
+  background: white;
+  padding: 20px 50px;
+}
+
+.clearfix {
+  display: block;
+}
+
+.post-box {
+  position: relative;
+  display: block;
+  padding: 10px;
+  margin: 0 1% 23px;
+  background: #e7e7eb;
+  width: 98%;
+  height: 180px;
+  float: left;
+  box-shadow: 0 0 0 5px #e7e7eb;
+  border: dashed 2px white;
+}
+
+/* サイドコンテンツ */
+
+.sub-header {
+  background: #c1d8ac;
+  color: #7b7c7d;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px 25px;
+}
+
+.sub-menu {
+  background: white;
+  color: #474a4d;
+  font-size: 1.1em;
+  width: 100%;
+  padding: 14px 25px;
+}
+
+.member {
+  background: #bbc8e6;
+  color: #7b7c7d;
+  font-size: 1.2em;
+  font-weight: bold;
+  width: 100%;
+  padding: 14px 25px 10px;
+  margin-top: 30px;
+}
+
+.member-name {
+  text-align: center;
+  background: white;
+  color: #474a4d;
+  font-size: 1.1em;
+  width: 100%;
+  padding: 14px 25px 10px;
+}
+
+.member-name p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.member-name img {
+  margin-bottom: 10px;
+}
+
+/* footer */
+
+.footer-1 {
+  background: white;
+  color: #474a4d;
+}
+
+.footer-2 {
+  text-align: center;
+  padding: 30px 0;
+}
+
+/* FontAwesome */
+
+.fa-youtube {
+  color: #dd7a56;
+}
+
+.fa-twitter {
+  color: #89c3eb;
+}
+
+/* コンテンツ */
+
+.topic-header {
+  background: white;
+  color: black;
+  width: 100%;
+  padding: 40px 70px 10px;
+}
+
+.update-time {
+  color: #ffa07a;
+  text-align: right;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 0;
+}
+
+.posted-time {
+  color: #dcdddd;
+  text-align: right;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.info {
+  background: white;
+  width: 100%;
+  padding: 0 70px;
+}
+
+.info-text {
+  background: white;
+  width: 100%;
+  padding: 50px 70px 10px;
+}
+
+.item-topic-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #474a4d;
+  position: relative;
+  padding-left: 25px;
+  padding-bottom: 5px;
+  width: 60%;
+}
+
+.item-topic-title:before {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border: none;
+  border-left: solid 15px transparent;
+  border-bottom: solid 15px #ffc68e;
+}
+
+.item-topic-title:after {
+  position: absolute;
+  content: '';
+  bottom: -5px;
+  left: 10px;
+  width: 100%;
+  border-bottom: solid 3px #ffc68e;
+}
+
+.mini-topic-title {
+  font-size: 1.3em;
+  color: #474a4d;
+  padding-left: 30px;
+}
+
+.mini-topic-text {
+  padding: 0 20px;
+}
+
+.item-table {
+  padding: 20px 30px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  background: #e7e7eb;
+  padding: 5px 5px 5px 10px;
+}
+
+table td {
+  padding: 3px 10px;
+}
+
+table span {
+  color: #ffa07a;
+}
+
+.item-table-comment {
+  color: #ffa07a;
+  font-size: 0.9em;
+  padding: 5px;
+}
