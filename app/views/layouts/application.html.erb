@@ -11,10 +11,7 @@
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
 
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <%= render 'layouts/shim' %>
 
     <script type="text/javascript">
       $(function(){
@@ -30,29 +27,12 @@
 
   </head>
   <body>
-    <header class="navbar navbar-default navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "MKW 最遅攻略サイト", mkw_path, id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "アイテム", '#', id: "menu" %></li>
-            <li><%= link_to "コース", '#', id: "menu" %></li>
-            <li><%= link_to "VS攻略", '#', id: "menu" %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
     <!-- yieldは各ページの内容をレイアウトに挿入するためのもの -->
     <!-- これにより各ページはbodyタグ内のHTMLだけ記述すればよくなる-->
     <%= yield %>
     </div>
-    <footer>
-      <div class="footer-1">
-        <div class="footer-2">
-          MKW 最遅攻略サイト 2019
-        </div>
-      </div>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>

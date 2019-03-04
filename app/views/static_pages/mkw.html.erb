@@ -3,65 +3,29 @@
   <div class="row">
     <div id="main" class="col-md-9">
       <div class="main-header">
+        <div class="banner">
+          <img src="./assets/banner.png" alt="マリオカートWii 最遅攻略ページ" width="100%">
+        </div>
         <div class="column1">
           <div class="content-ex">
-            <i class="fas fa-feather-alt"></i> このサイトは……
+            <i class="far fa-grin-beam fa-lg"></i> マリオカートWii最遅攻略ページとは
           </div>
-          <p>10年以上前に発売されたゲーム『マリオカートWii』の攻略を今更やるサイトです。アイテムの基礎知識や対人戦向けのVSテクニックなど、対人戦レート9000安定を目標にした攻略情報をまとめていきます。</p>
+          <p>10年以上前に発売されたゲーム『マリオカートWii』の攻略を今更するサイトです。基本的なゲームシステムはすでに他のサイトで書かれているので、このサイトでは対人戦向けのVSテクニックを中心に情報をまとめていきます。今夏リリース予定のシリーズ最新作『マリオカートツアー』に備えてマリオカートWiiの戦術を煮詰めよう！ ^^</p>
         </div>
-      </div>
-      <div class="menu">
-        <ul>
-          <li><a href="#"><i class="fas fa-bomb fa-lg"></i> アイテム攻略</a></li>
-          <li><a href="#"><i class="fas fa-motorcycle fa-lg"></i> コース攻略</a></li>
-          <li><a href="#"><i class="fas fa-bolt fa-lg"></i> VS攻略</a></li>
-        </ul>
       </div>
       <div class="pickup">
         <div id="new-entry">
-          <i class="fas fa-wifi fa-lg"></i> 新着記事
+          新着記事
         </div>
       </div>
       <div class="pickup-box clearfix">
-        <div class="post-box">
-          <div class="post-thumbnail">
-            必見！アイテム仕様一覧
-          </div>
+        <div class="top-link-banner">
+          <%= link_to image_tag("techbanner.png", alt: "techbanner", width: "100%", class: "top-link-banner2"), mkw_path %>
         </div>
-        <div class="post-box">
-          <div class="post-thumbnail">
-            必読！VSの掟
-          </div>
-        </div>
-        <div class="post-box">
-
-        </div>
-        <div class="post-box">
-
+        <div class="top-link-banner">
+          <%= link_to image_tag("itembanner.png", alt: "itembanner", width: "100%", class: "top-link-banner2"), item_info_path %>
         </div>
       </div>
     </div>
-    <aside id="sub" class="col-md-3">
-      <div class="sub-header">
-        <i class="far fa-hand-point-right fa-lg"></i> おすすめ記事
-      </div>
-      <div class="sub-menu">
-        アイテム基礎知識
-      </div>
-      <div class="member">
-        記事作成
-      </div>
-      <div class="member-name">
-        <img src="./assets/deco_off.jpg" alt="Deco" width="120">
-        <br>
-        Deco
-        <a href="https://twitter.com/Deco_bee">
-          <i class="fab fa-youtube fa-lg faa-pulse animated-hover"></i>
-        </a>
-        <a href="https://www.youtube.com/user/Deco1008">
-          <i class="fab fa-twitter fa-lg faa-wrench animated-hover"></i>
-        </a>
-        <p>マリオカートWii 10年</p>
-      </div>
-    </aside>
+    <%= render 'layouts/side' %>
   </div>

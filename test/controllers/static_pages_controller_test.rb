@@ -18,15 +18,9 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "#{@base_title}"
   end
 
-  test "should get help" do
-    get static_pages_help_url
+  test "should get item_info" do
+    get item_info_path
     assert_response :success
-    assert_select "title", "Help | #{@base_title}"
-  end
-
-  test "should get about" do
-    get static_pages_about_url
-    assert_response :success
-    assert_select "title", "About | #{@base_title}"
+    assert_select "title", "アイテム攻略 | #{@base_title}"
   end
 end
