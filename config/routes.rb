@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   # 記事ページ
   get '/item/info', to: 'static_pages#item_info'
-  get '/vstech10', to: 'static_pages#vstech10'
+  get '/column', to: 'static_pages#column'
 
   get '/vs/item-dodge', to: 'static_pages#item_dodge'
   get '/vs/lag', to: 'static_pages#lag'

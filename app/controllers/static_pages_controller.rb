@@ -9,8 +9,8 @@ class StaticPagesController < ApplicationController
   def item_info
   end
 
-  # /vstech10 VS必勝10テクニックのページを描画
-  def vstech10
+  # /column マリカーコラムのページを描画
+  def column
   end
 
   # VSテクニック10個

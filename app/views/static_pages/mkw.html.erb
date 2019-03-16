@@ -4,7 +4,7 @@
     <div id="main" class="col-md-9">
       <div class="main-header">
         <div class="banner">
-          <img src="./assets/banner.png" alt="マリオカートWii 最遅攻略ページ" width="100%">
+          <%= image_tag "banner.png", alt: "マリオカートWii 最遅攻略ページ", width: "100%" %>
         </div>
         <div class="column1">
           <div class="content-ex">
@@ -15,12 +15,12 @@
       </div>
       <div class="pickup">
         <div id="new-entry">
-          新着記事
+          サイトメニュー
         </div>
       </div>
       <div class="pickup-box clearfix">
         <div class="top-link-banner">
-          <%= link_to image_tag("techbanner.png", alt: "techbanner", width: "100%", class: "top-link-banner2"), mkw_path %>
+          <%= link_to image_tag("column_banner.png", alt: "techbanner", width: "100%", class: "top-link-banner2"), column_path %>
         </div>
         <div class="top-link-banner">
           <%= link_to image_tag("itembanner.png", alt: "itembanner", width: "100%", class: "top-link-banner2"), item_info_path %>

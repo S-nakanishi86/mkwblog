@@ -1,9 +1,11 @@
 <aside id="sub" class="col-md-3">
   <div class="sub-header">
-    <i class="far fa-hand-point-right fa-lg"></i> おすすめ記事
+    <i class="far fa-hand-point-right fa-lg"></i> おすすめページ
   </div>
   <div class="sub-menu">
-    アイテム基礎知識
+    <%= link_to image_tag("column_banner.png", alt: "マリカーコラム", width: "100%", class: "sub-menu2"), column_path %>
+    <%= link_to image_tag("vstech/1_vstech_banner.png", alt: "vsbanner", width: "100%", class: "sub-menu2"), vs_item_dodge_path %>
+    <%= link_to image_tag("vstech/2_vstech_banner.png", alt: "vsbanner", width: "100%", class: "sub-menu2"), vs_lag_path %>
   </div>
   <div class="sub-topic">
     <i class="fab fa-medapps fa-lg"></i> ヒント

@@ -10,7 +10,7 @@ body {
 
 @media screen and (max-width: 767px) {
   body {
-    padding-top: 140px;
+    padding-top: 110px;
   }
 }
 
@@ -91,6 +91,16 @@ p {
 #menu {
   font-size: 1.2em;
   font-family: 'klee', 'Hannotate SC', 'Yu Gothic UI', sans-serif;
+  text-align: right;
+}
+
+.top-nav {
+  transition: .3s;
+}
+
+.head-animation {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
 
 /* メインコンテンツ */
@@ -114,17 +124,6 @@ p {
   border: dashed 2px white;
   padding: 25px 25px 20px;
   font-family: 'klee', 'Hannotate SC', 'Yu Gothic UI', sans-serif;
-}
-
-.column1:after {
-  position: absolute;
-  content: '';
-  left: -7px;
-  top: -7px;
-  border-width: 0 0 30px 30px;
-  border-style: solid;
-  border-color: #fff #fff #a6a5c4;
-  box-shadow: 1px 1px 0 0 rgba(0, 0, 0, 0.15);
 }
 
 .content-ex {
@@ -201,11 +200,14 @@ p {
     transform: translateY(4px);/*下に動く*/
     border-top: solid 4px white;
     border-bottom: none;/*線を消す*/
+    transition-property: opacity;
+    transition-duration: 0.3s;
   }
 }
 
 .top-link-banner2 {
-  border-bottom: solid 4px #8491c3;
+  border-bottom: solid 4px #adadad;
+  border-radius: 0.5em;
 }
 
 /* サイドコンテンツ */
@@ -225,6 +227,17 @@ p {
   font-size: 1.1em;
   width: 100%;
   padding: 14px 25px;
+  :hover {
+    opacity: 0.9;
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}
+
+.sub-menu2 {
+  border-radius: 0.5em;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
 
 .sub-topic {
@@ -330,7 +343,7 @@ p {
   padding-left: 15px;
   border-left: solid 5px #eb6101;
   border-bottom: solid 3px #d7d7d7;
-  width: 70%;
+  width: 80%;
 }
 
 .mini-topic-title {
@@ -381,12 +394,15 @@ table span {
     transform: translateY(4px);/*下に動く*/
     border-top: solid 4px white;
     border-bottom: none;/*線を消す*/
+    transition-property: opacity;
+    transition-duration: 0.3s;
   }
 }
 
 .topic-link-banner2 {
-  border-bottom: solid 4px #8491c3;
+  border-bottom: solid 4px #adadad;
   margin-left: 1%;
+  border-radius: 0.5em;
 }
 
 /* アイテムアイコン */
@@ -400,4 +416,38 @@ table span {
 .gifs {
   text-align: center;
   padding-top: 10px;
+}
+
+/* ページトップへジャンプボタン */
+
+#pagetop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+}
+#pagetop a {
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-color: #4d5aaf;
+    text-align: center;
+    color: #222;
+    border-radius: 50%;
+    transition: .5s;
+    font-size: 25px;
+    text-decoration: none;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.12), 0 2px 2px 0 rgba(0,0,0,.24);/*影*/
+    filter:alpha(opacity=50);
+    -moz-opacity: 0.5;
+    opacity: 0.9;
+}
+#pagetop a:hover {
+    opacity: 0.6;
+}
+
+#pagetop i {
+  color: white;
+  line-height: 70px;
+  vertical-align: middle;
 }

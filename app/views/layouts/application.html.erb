@@ -14,6 +14,42 @@
     <%= render 'layouts/shim' %>
 
     <script type="text/javascript">
+
+      //ナビゲーションバーのスクリプトはheadに書く。多分ページ読み込み順の問題。
+      //画面下にスクロールすると消えるナビゲーションバー
+      var startPos = 0, winScrollTop = 0;
+      $(window).scroll(function(){
+        winScrollTop = $(this).scrollTop();
+        if (winScrollTop >= startPos) {
+          if(winScrollTop >= 150){
+            $('.top-nav').addClass('head-animation');
+          }
+        } else {
+          $('.top-nav').removeClass('head-animation');
+        }
+        startPos = winScrollTop;
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <p id="pagetop"><a href="#">
+      <i class="fa fa-angle-up"></i>
+    </a></p>
+    <div class="container">
+    <!-- yieldは各ページの内容をレイアウトに挿入するためのもの -->
+    <!-- これにより各ページはbodyタグ内のHTMLだけ記述すればよくなる-->
+    <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+
+    <script type="text/javascript">
+
+      //jQueryはbody閉じの直前で読む(ページ読み込み順の影響でうまく動作しない場合がある)
+
+      //ホバーで画像を変更する
       $(function(){
         $('img').hover(function(){
           $(this).attr('src', $(this).attr('src').replace('_off','_on'));
@@ -23,16 +59,25 @@
           }
         });
       });
+
+      //ページトップに戻るボタン
+      $(document).ready(function() {
+        var pagetop = $('#pagetop');
+        pagetop.hide();
+        $(window).scroll(function () {
+          if ($(this).scrollTop() > 100) {
+            pagetop.fadeIn();
+          } else {
+            pagetop.fadeOut();
+          }
+        });
+        pagetop.click(function () {
+          $('body, html').animate({ scrollTop: 0 }, 500);
+          return false; //何回も表示させるために必要
+        });
+      });
+
     </script>
 
-  </head>
-  <body>
-    <%= render 'layouts/header' %>
-    <div class="container">
-    <!-- yieldは各ページの内容をレイアウトに挿入するためのもの -->
-    <!-- これにより各ページはbodyタグ内のHTMLだけ記述すればよくなる-->
-    <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
   </body>
 </html>
