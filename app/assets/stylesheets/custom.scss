@@ -457,7 +457,7 @@ table span {
 
 @media screen and (max-width: 767px) {
   body {
-    padding-top: 110px;
+    padding-top: 50px;
   }
   #main {
     width: 100%;
@@ -507,5 +507,9 @@ table span {
     font-size: 1.4em;
     line-height: 1.9em;
     font-family: 'ヒラギノ角ゴシック','Hiragino Sans','YuGothic','Yu Gothic', sans-serif;
+  }
+  #menu {
+    width: 25%;
+    float: right;
   }
 }
