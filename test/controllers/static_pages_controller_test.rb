@@ -11,8 +11,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
 #    assert_response :success
 #  end
 
-  test "should get mkw" do
-    get static_pages_mkw_url
+  test "should get root" do
+    get root_url
     assert_response :success
     # 特定のHTMLタグが存在するかのテスト
     assert_select "title", "#{@base_title}"
